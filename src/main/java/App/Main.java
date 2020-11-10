@@ -8,8 +8,8 @@ public class Main {
 		Lotto lotto = new Lotto();
 		lotto.giveNumbers();
 		lotto.randomNumbers();
-		lotto.showNumbers(lotto.givenNumbers, lotto.randomNumbers);
-		lotto.winnOrLoose(lotto.givenNumbers, lotto.randomNumbers);
+		lotto.showNumbers();
+		lotto.winnOrLoose();
 		
 		
 		
