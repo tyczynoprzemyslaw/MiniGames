@@ -23,16 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f78053d-9823-4062-a545-3991d73f639d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MiniGames.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lotto/Lotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lotto/Lotto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lotto/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lotto/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lotto/Lotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lotto/Lotto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/pl.tyczyno/MiniGames/pom.properties" beforeDir="false" />
@@ -50,7 +42,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -62,32 +54,31 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Maven.MiniGames []hhhh">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
+      <module name="lotto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MiniGames []" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
-        <option name="myGeneralSettings">
-          <MavenGeneralSettings>
-            <option name="alwaysUpdateSnapshots" value="false" />
-            <option name="checksumPolicy" value="NOT_SET" />
-            <option name="failureBehavior" value="NOT_SET" />
-            <option name="localRepository" value="" />
-            <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-            <option name="nonRecursive" value="false" />
-            <option name="outputLevel" value="INFO" />
-            <option name="pluginUpdatePolicy" value="DEFAULT" />
-            <option name="printErrorStackTraces" value="false" />
-            <option name="threads" />
-            <option name="usePluginRegistry" value="false" />
-            <option name="userSettingsFile" value="" />
-            <option name="workOffline" value="false" />
-          </MavenGeneralSettings>
-        </option>
+        <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
@@ -108,25 +99,10 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="MiniGames []hhhh" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
-        <option name="myRunnerSettings">
-          <MavenRunnerSettings>
-            <option name="delegateBuildToMaven" value="false" />
-            <option name="environmentProperties">
-              <map />
-            </option>
-            <option name="jreName" value="14" />
-            <option name="mavenProperties">
-              <map />
-            </option>
-            <option name="passParentEnv" value="true" />
-            <option name="runMavenInBackground" value="true" />
-            <option name="skipTests" value="false" />
-            <option name="vmOptions" value="" />
-          </MavenRunnerSettings>
-        </option>
+        <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
             <option name="profiles">
@@ -139,7 +115,7 @@
             <option name="profilesMap">
               <map />
             </option>
-            <option name="resolveToWorkspace" value="true" />
+            <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$" />
           </MavenRunnerParameters>
         </option>
@@ -147,9 +123,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.MiniGames []hhhh" />
       <item itemvalue="Maven.MiniGames []" />
+      <item itemvalue="Application.Main" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -160,6 +141,9 @@
       <option name="presentableId" value="Default" />
       <updated>1605020405544</updated>
       <workItem from="1605020406728" duration="2503000" />
+      <workItem from="1605029668672" duration="539000" />
+      <workItem from="1605037841550" duration="93000" />
+      <workItem from="1605037942082" duration="2517000" />
     </task>
     <servers />
   </component>
@@ -186,39 +170,64 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605027215132">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1605037998302">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605027215132" />
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605037998302" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605038383701">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605038383701" />
     <state x="124" y="96" width="1095" height="495" key="DiffContextDialog" timestamp="1605026987567">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="124" y="96" width="1095" height="495" key="DiffContextDialog/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605026987567" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1605028931429">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1605037904903">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605028931429" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1605028931429">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605037904903" />
+    <state width="1237" height="47" key="GridCell.Tab.0.bottom" timestamp="1605041403421">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605028931429" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1605028931429">
+    <state width="1860" height="854" key="GridCell.Tab.0.bottom/0.0.1280.680/-1440.171.1440.860@-1440.171.1440.860" timestamp="1605039498938" />
+    <state width="1237" height="47" key="GridCell.Tab.0.bottom/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605041403421" />
+    <state width="1237" height="47" key="GridCell.Tab.0.center" timestamp="1605041403421">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605028931429" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1605028931429">
+    <state width="1860" height="854" key="GridCell.Tab.0.center/0.0.1280.680/-1440.171.1440.860@-1440.171.1440.860" timestamp="1605039498938" />
+    <state width="1237" height="47" key="GridCell.Tab.0.center/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605041403421" />
+    <state width="1237" height="47" key="GridCell.Tab.0.left" timestamp="1605041403421">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605028931429" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1605020659000">
+    <state width="1860" height="854" key="GridCell.Tab.0.left/0.0.1280.680/-1440.171.1440.860@-1440.171.1440.860" timestamp="1605039498937" />
+    <state width="1237" height="47" key="GridCell.Tab.0.left/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605041403421" />
+    <state width="1237" height="47" key="GridCell.Tab.0.right" timestamp="1605041403421">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605020659000" />
+    <state width="1860" height="854" key="GridCell.Tab.0.right/0.0.1280.680/-1440.171.1440.860@-1440.171.1440.860" timestamp="1605039498938" />
+    <state width="1237" height="47" key="GridCell.Tab.0.right/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605041403421" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1605038441007">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605038441007" />
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605020753214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605020753214" />
+    <state x="445" y="194" key="extract.method.dialog" timestamp="1605038760023">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="445" y="194" key="extract.method.dialog/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605038760023" />
+    <state x="342" y="98" key="refactoring.ChangeSignatureDialog" timestamp="1605041419520">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="342" y="98" key="refactoring.ChangeSignatureDialog/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605041419519" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1605038557967">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605038557967" />
   </component>
 </project>
