@@ -1,102 +1,63 @@
 package lotto;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Lotto {
-    final int HOW_MANY_NUMBERS = 6;
-    final int MIN = 1;
-    final int MAX = 99;
+    final static int HOW_MANY_NUMBERS = 6;
+    final static int MIN = 1;
+    final static int MAX = 99;
 
+    final static String IT_IS_NOT_NUMBER="Type real number!";
+    final static String START_MESSAGE= "Give 6 different numbers from range 1-99, to play lotto";
+    final static String NUMBER_REPEAT= "You already gave this number";
+    final static String NUMBER_OUT_OF_RANGE= "Type number from 1 to 99";
     int match = 0;
-    Integer numberAddingToList = 0;
+    Integer numberAdding = 0;
 
-    public ArrayList<Integer> userNumbers = new ArrayList<Integer>();
-    public ArrayList<Integer> randomNumbers = new ArrayList<Integer>();
+    public Set<Integer> userNumbers = new HashSet<Integer>();
+    public Set<Integer> randomNumbers = new HashSet<Integer>();
 
     Random randomGenerator = new Random();
-    boolean isNumberAccepteable = true;
-    String startMessage= "Give 6 different numbers from range 1-99, to play lotto";
+    private boolean isNumberAccepteable;
 
-    public Lotto() {
-        super();
+    public void play() {
+        getNumberFromUser();
+       randomNumbers();
+        showNumbers();
+        //winnOrLoose();
     }
 
-    public Lotto(ArrayList<Integer> userNumbers, ArrayList<Integer> randomNumbers, Random randomGenerator, int match, Integer numberAddingToList, boolean isNumberAccepteable) {
-        super();
-        this.userNumbers = userNumbers;
-        this.randomNumbers = randomNumbers;
-        this.randomGenerator = randomGenerator;
-        this.match = match;
-        this.isNumberAccepteable = isNumberAccepteable;
-        this.numberAddingToList = numberAddingToList;
-    }
-
-    public void giveNumbers() {
-        System.out.println(startMessage);
+    private void getNumberFromUser() {
+        System.out.println(START_MESSAGE);
         Scanner scan = new Scanner(System.in);
+        while (userNumbers.size() < HOW_MANY_NUMBERS) {
 
-        for (int i = 0; i < HOW_MANY_NUMBERS; i++) {
-            //System.out.println("Kó³ko" + i);
             while (!scan.hasNextInt()) {
                 scan.next();
-                System.out.println("Type real number!");
+                System.out.println(IT_IS_NOT_NUMBER);
             }
-            Integer numberAddingToList = scan.nextInt();
+            Integer numberAdding = scan.nextInt();
 
-            if (userNumbers.contains(numberAddingToList)) {
-                System.out.println("You already gave this number");
-                /* Próbowa³em zast¹piæ te dwie linie metod¹ (tym bardziej, ¿e redundancja mocno,
-                 ale wszystko siê sypie
-                 doubledOrIncorrectValue(i);
-                */
-                i--;
-                isNumberAccepteable = false;
-
+            if (userNumbers.contains(numberAdding)) {
+                System.out.println(NUMBER_REPEAT);
+                continue;
             }
 
-            if (isNotInRange(numberAddingToList)) {
-                System.out.println("Type number from 1 to 99");
-                i--;
-                isNumberAccepteable = false;
-
+            if (isNotInRange(numberAdding)) {
+                System.out.println(NUMBER_OUT_OF_RANGE);
+                continue;
             }
 
-            if (isNumberAccepteable) {
-                userNumbers.add(numberAddingToList);
-                System.out.println("Added: " + numberAddingToList);
-            }
-            isNumberAccepteable = true;
+            userNumbers.add(numberAdding);
+            System.out.println("Added: " + numberAdding);
 
         }
         scan.close();
     }
 
     public void randomNumbers() {
-        for (int i = 0; i < HOW_MANY_NUMBERS; i++) {
-            isNumberAccepteable = true;
-            numberAddingToList = randomGenerator.nextInt(MAX + 1);
-            System.out.println("Checking 1");
-            if (randomNumbers.contains(numberAddingToList)) {
-                i--;
-                isNumberAccepteable = false;
-            }
-
-            if (isNotInRange(numberAddingToList)) {
-                System.out.println("Checking 2");
-                System.out.println("Type number from 1 to 99");
-                i--;
-                isNumberAccepteable = false;
-            }
-            System.out.println("Checking 3");
-
-
-            if (isNumberAccepteable) {
-                System.out.println("Checking 4");
-                randomNumbers.add(numberAddingToList);
-            }
-            System.out.println("Checking 5");
+        while (randomNumbers.size() < HOW_MANY_NUMBERS) {
+          randomNumbers.add(randomGenerator.nextInt(MAX + 1));
         }
     }
 
@@ -118,19 +79,14 @@ public class Lotto {
         loopFromList(randomNumbers);
     }
 
-    private void loopFromList(ArrayList<Integer> list) {
-        for (int i = 0; i < HOW_MANY_NUMBERS; i++) {
-            System.out.println(list.get(i));
+    private void loopFromList(Set<Integer> set) {
+        for (Integer i : set) {
+            System.out.println((i));
         }
     }
 
-    private void doubledOrIncorrectValue(int i) {
-        i = i - 1;
-        isNumberAccepteable = false;
-    }
-
-    private boolean isNotInRange(Integer numberAddingToList) {
-        return numberAddingToList < MIN || numberAddingToList > MAX;
+    private boolean isNotInRange(Integer numberAdding) {
+        return numberAdding < MIN || numberAdding > MAX;
     }
 
     private int howManyMatches() {
@@ -144,7 +100,7 @@ public class Lotto {
     }
 
     private boolean isNumberFromUsesExistInRandomNumbers(int i, int j) {
-        return (randomNumbers.get(i)).equals(userNumbers.get(j));
+        return true; //(randomNumbers(i)).equals(userNumbers(j));
     }
 
 
