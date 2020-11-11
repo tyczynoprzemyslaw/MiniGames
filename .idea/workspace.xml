@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f78053d-9823-4062-a545-3991d73f639d" name="Default Changelist" comment="Refactoring- convert several Strings into variables,&#10;Change most methods from public to private. Change data structure to HashSet">
+    <list default="true" id="7f78053d-9823-4062-a545-3991d73f639d" name="Default Changelist" comment="Refactoring- i've cleaned code even more, completely working app on HashSet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lotto/Lotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lotto/Lotto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lotto/Lotto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lotto/Lotto.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +138,7 @@
       <workItem from="1605020406728" duration="2503000" />
       <workItem from="1605029668672" duration="539000" />
       <workItem from="1605037841550" duration="93000" />
-      <workItem from="1605037942082" duration="11730000" />
+      <workItem from="1605037942082" duration="12120000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring- convert several values into variables">
       <created>1605041657428</created>
@@ -156,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605124035525</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactoring- i've cleaned code even more, completely working app on HashSet">
+      <created>1605132907272</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605132907272</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +192,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring- convert several values into variables" />
     <MESSAGE value="Refactoring- convert several Strings into variables,&#10;Change most methods from public to private. Change data structure to HashSet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring- convert several Strings into variables,&#10;Change most methods from public to private. Change data structure to HashSet" />
+    <MESSAGE value="Refactoring- i've cleaned code even more, completely working app on HashSet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring- i've cleaned code even more, completely working app on HashSet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1605037998302">
@@ -230,14 +236,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605038441007" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605124057845">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605132958861">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605124057845" />
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605123936260">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605132958861" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605132652779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605123936260" />
+    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1440.171.1440.860@0.0.1280.680" timestamp="1605132652779" />
     <state x="478" y="182" key="extract.method.dialog" timestamp="1605131546773">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
