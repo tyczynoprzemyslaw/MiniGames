@@ -3,75 +3,83 @@ package lotto;
 import java.util.*;
 
 public class Lotto {
+    final static String IT_IS_NOT_NUMBER="Type real number!";
+    final static String START_MESSAGE= "Give 6 different numbers from range 1-99, to play lotto";
+    final static String NUMBER_CONTAINED= "You already gave this number";
+    final static String NUMBER_OUT_OF_RANGE= "Type number from 1 to 99";
+    final static String LOOSE="You loose, numbers matched: ";
+    final static String WIN="You win, numbers matched: ";
+
     final static int HOW_MANY_NUMBERS = 6;
     final static int MIN = 1;
     final static int MAX = 99;
 
-    final static String IT_IS_NOT_NUMBER="Type real number!";
-    final static String START_MESSAGE= "Give 6 different numbers from range 1-99, to play lotto";
-    final static String NUMBER_REPEAT= "You already gave this number";
-    final static String NUMBER_OUT_OF_RANGE= "Type number from 1 to 99";
     int match = 0;
-    Integer numberAdding = 0;
 
     public Set<Integer> userNumbers = new HashSet<Integer>();
     public Set<Integer> randomNumbers = new HashSet<Integer>();
 
-    Random randomGenerator = new Random();
-    private boolean isNumberAccepteable;
+     Random randomGenerator = new Random();
+     Scanner scan = new Scanner(System.in);
 
     public void play() {
         getNumberFromUser();
-       randomNumbers();
+        randomNumbers();
         showNumbers();
-        //winnOrLoose();
+        winnOrLoose();
     }
 
     private void getNumberFromUser() {
         System.out.println(START_MESSAGE);
-        Scanner scan = new Scanner(System.in);
+
         while (userNumbers.size() < HOW_MANY_NUMBERS) {
 
-            while (!scan.hasNextInt()) {
-                scan.next();
-                System.out.println(IT_IS_NOT_NUMBER);
-            }
-            Integer numberAdding = scan.nextInt();
-
-            if (userNumbers.contains(numberAdding)) {
-                System.out.println(NUMBER_REPEAT);
-                continue;
-            }
-
-            if (isNotInRange(numberAdding)) {
-                System.out.println(NUMBER_OUT_OF_RANGE);
-                continue;
-            }
-
-            userNumbers.add(numberAdding);
-            System.out.println("Added: " + numberAdding);
-
+            Integer numberAdding = getNumber(scan);
+            isNumberCorrect(numberAdding);
         }
         scan.close();
     }
 
-    public void randomNumbers() {
+    private void isNumberCorrect(Integer numberAdding) {
+        if (userNumbers.contains(numberAdding)) {
+            System.out.println(NUMBER_CONTAINED);
+            return;
+        }
+
+        if (isNotInRange(numberAdding)) {
+            System.out.println(NUMBER_OUT_OF_RANGE);
+            return;
+        }
+        userNumbers.add(numberAdding);
+    }
+
+    private Integer getNumber(Scanner scan) {
+        while (!scan.hasNextInt()) {
+            scan.next();
+            System.out.println(IT_IS_NOT_NUMBER);
+        }
+        return scan.nextInt();
+    }
+
+    private void randomNumbers() {
         while (randomNumbers.size() < HOW_MANY_NUMBERS) {
-          randomNumbers.add(randomGenerator.nextInt(MAX + 1));
+            Integer temp =randomGenerator.nextInt(MAX + 1);
+            if (!isNotInRange(temp)){
+                randomNumbers.add(temp);
+            }
+
         }
     }
 
-
-    public void winnOrLoose() {
+    private void winnOrLoose() {
         if (howManyMatches() > 3) {
-            System.out.println("You won, there was : " + match + " matches");
+            System.out.println(WIN + match);
         } else {
-            System.out.println("You loose, there was: " + match + " matches");
+            System.out.println(LOOSE + match);
         }
-
     }
 
-    public void showNumbers() {
+    private void showNumbers() {
         System.out.println("Choosen: ");
         loopFromList(userNumbers);
 
@@ -90,18 +98,12 @@ public class Lotto {
     }
 
     private int howManyMatches() {
-        for (int i = 0; i < HOW_MANY_NUMBERS; i++) {
-            for (int j = 0; j < HOW_MANY_NUMBERS; j++)
-                if (isNumberFromUsesExistInRandomNumbers(i, j)) {
-                    match++;
-                }
+
+        for (Integer temp : randomNumbers) {
+            if (userNumbers.contains(temp)){
+                match++;
+            }
         }
         return match;
     }
-
-    private boolean isNumberFromUsesExistInRandomNumbers(int i, int j) {
-        return true; //(randomNumbers(i)).equals(userNumbers(j));
-    }
-
-
 }
