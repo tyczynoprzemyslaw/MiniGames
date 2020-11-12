@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f78053d-9823-4062-a545-3991d73f639d" name="Default Changelist" comment="Refactoring- i've cleaned code even more, completely working app on HashSet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lotto/Lotto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lotto/Lotto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,8 +119,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Maven.MiniGames []" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Maven.MiniGames []" />
     </list>
     <recent_temporary>
       <list>
@@ -139,6 +140,7 @@
       <workItem from="1605029668672" duration="539000" />
       <workItem from="1605037841550" duration="93000" />
       <workItem from="1605037942082" duration="12120000" />
+      <workItem from="1605165835843" duration="1090000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring- convert several values into variables">
       <created>1605041657428</created>
