@@ -1,32 +1,39 @@
 package lotto;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+import static lotto.IntegerSetter.CompareSets;
+import static lotto.IntegerSetter.loopFromSet;
 
 public class Lotto {
-    private final static String IT_IS_NOT_NUMBER="Type real number!";
-    private final static String START_MESSAGE= "Give 6 different numbers from range 1-99, to play lotto";
-    private final static String NUMBER_CONTAINED= "You already gave this number";
-    private final static String NUMBER_OUT_OF_RANGE= "Type number from 1 to 99";
-    private final static String LOOSE="You loose, numbers matched: ";
-    private final static String WIN="You win, numbers matched: ";
-    private final static String CHOOSEN = "Choosen: ";
-    private final static String RANDOMS = "Randoms: ";
 
-    private final static int HOW_MANY_NUMBERS = 6;
-    private final static int MIN = 1;
-    private final static int MAX = 99;
+    private static final String IT_IS_NOT_NUMBER = "Type real number!";
+    private static final String START_MESSAGE = "Give 6 different numbers from range 1-99, to play lotto";
+    private static final String NUMBER_CONTAINED = "You already gave this number";
+    private static final String NUMBER_OUT_OF_RANGE = "Type number from 1 to 99";
+    private static final String LOOSE = "You loose, numbers matched: ";
+    private static final String WIN = "You win, numbers matched: ";
+    private static final String CHOOSEN = "Choosen: ";
+    private static final String RANDOMS = "Randoms: ";
+    private static final int HOW_MANY_NUMBERS = 6;
+    private static final int MIN = 1;
+    private static final int MAX = 99;
 
-    private int match = 0;
-
-    private Set<Integer> userNumbers = new HashSet<Integer>();
+    private final Set<Integer> userNumbers = new HashSet<Integer>();
+    private final NumbersGenerator generator = new NumbersGenerator();
+    private final Scanner scan = new Scanner(System.in);
     private Set<Integer> randomNumbers = new HashSet<Integer>();
 
-     private Random randomGenerator = new Random();
-     private Scanner scan = new Scanner(System.in);
+
+    public static boolean isNotInRange(Integer numberAdding) {
+        return numberAdding < MIN || numberAdding > MAX;
+    }
 
     public void play() {
         getNumberFromUser();
-        randomNumbers();
+        randomNumbers = generator.generateRandomNumbers(MIN, MAX, HOW_MANY_NUMBERS);
         showNumbers();
         winnOrLoose();
     }
@@ -62,17 +69,9 @@ public class Lotto {
         return scan.nextInt();
     }
 
-    private void randomNumbers() {
-        while (randomNumbers.size() < HOW_MANY_NUMBERS) {
-            Integer temp =randomGenerator.nextInt(MAX + 1);
-            if (!isNotInRange(temp)){
-                randomNumbers.add(temp);
-            }
-        }
-    }
-
     private void winnOrLoose() {
-        if (howManyMatches() > 3) {
+        int match = CompareSets(randomNumbers, userNumbers);
+        if (match > 3) {
             System.out.println(WIN + match);
         } else {
             System.out.println(LOOSE + match);
@@ -87,22 +86,5 @@ public class Lotto {
         loopFromSet(randomNumbers);
     }
 
-    private void loopFromSet(Set<Integer> set) {
-        for (Integer i : set) {
-            System.out.println((i));
-        }
-    }
 
-    private boolean isNotInRange(Integer numberAdding) {
-        return numberAdding < MIN || numberAdding > MAX;
-    }
-
-    private int howManyMatches() {
-        for (Integer temp : randomNumbers) {
-            if (userNumbers.contains(temp)){
-                match++;
-            }
-        }
-        return match;
-    }
 }
