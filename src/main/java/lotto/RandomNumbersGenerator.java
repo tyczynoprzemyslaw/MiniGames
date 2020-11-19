@@ -4,17 +4,20 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import static lotto.Lotto.isNotInRange;
 
-public class NumbersGenerator {
+public class RandomNumbersGenerator {
 
     private final Random randomGenerator = new Random();
 
-     Set<Integer> generateRandomNumbers(int minValue, int maxValue, int how_many) {
+    private static boolean isNotInRange(Integer numberAdding, int minvalue, int maxValue) {
+        return numberAdding < minvalue || numberAdding > maxValue;
+    }
+
+    public Set<Integer> generateRandomNumbers(int minValue, int maxValue, int how_many) {
         Set<Integer> randomNumbers = new HashSet<Integer>();
         while (randomNumbers.size() < how_many) {
             Integer temp = randomGenerator.nextInt(maxValue + minValue);
-            if (!isNotInRange(temp)) {
+            if (!isNotInRange(temp, minValue, maxValue)) {
                 randomNumbers.add(temp);
             }
         }
