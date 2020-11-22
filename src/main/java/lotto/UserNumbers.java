@@ -13,11 +13,9 @@ public class UserNumbers {
     private final Scanner scan = new Scanner(System.in);
     private final Set<Integer> userNumbers = new HashSet<Integer>();
 
-    private static boolean isNotInRange(Integer numberAdding, int minValue, int maxValue) {
-        return numberAdding < minValue || numberAdding > maxValue;
-    }
 
-    Set<Integer> getNumberFromUser(int minValue, int maxValue, int howManyNumbers) {
+
+    public Set<Integer> getNumberFromUser(int minValue, int maxValue, int howManyNumbers) {
 
         System.out.println(START_MESSAGE);
         while (userNumbers.size() < howManyNumbers) {
@@ -46,5 +44,9 @@ public class UserNumbers {
             return;
         }
         userNumbers.add(numberAdding);
+    }
+
+    private static boolean isNotInRange(Integer numberAdding, int minValue, int maxValue) {
+        return numberAdding < minValue || numberAdding > maxValue;
     }
 }

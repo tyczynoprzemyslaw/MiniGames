@@ -9,10 +9,6 @@ public class RandomNumbersGenerator {
 
     private final Random randomGenerator = new Random();
 
-    private static boolean isNotInRange(Integer numberAdding, int minvalue, int maxValue) {
-        return numberAdding < minvalue || numberAdding > maxValue;
-    }
-
     public Set<Integer> generateRandomNumbers(int minValue, int maxValue, int how_many) {
         Set<Integer> randomNumbers = new HashSet<Integer>();
         while (randomNumbers.size() < how_many) {
@@ -22,5 +18,9 @@ public class RandomNumbersGenerator {
             }
         }
         return randomNumbers;
+    }
+
+    private static boolean isNotInRange(Integer numberAdding, int minvalue, int maxValue) {
+        return numberAdding < minvalue || numberAdding > maxValue;
     }
 }
