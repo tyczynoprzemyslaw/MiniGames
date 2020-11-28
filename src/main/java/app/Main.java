@@ -1,6 +1,6 @@
 package app;
 
-import lotto.Lotto;
+import app.lotto.Lotto;
 
 public class Main {
 

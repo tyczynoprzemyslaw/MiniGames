@@ -1,22 +1,19 @@
-package lotto;
+package app.lotto;
+
+import app.Game;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static lotto.IntegerSetter.CompareSets;
-import static lotto.IntegerSetter.loopFromSet;
+import static app.lotto.IntegerSetter.CompareSets;
+import static app.lotto.IntegerSetter.loopFromSet;
+import static app.lotto.LottoConfig.*;
+import static app.lotto.LottoMessageProvider.*;
 
-public class Lotto {
+public class Lotto implements Game {
 
-    private static final String LOOSE = "You loose, numbers matched: ";
-    private static final String WIN = "You win, numbers matched: ";
-    private static final String CHOOSEN = "Choosen: ";
-    private static final String RANDOMS = "Randoms: ";
-    private static final int HOW_MANY_NUMBERS = 6;
-    private static final int MIN = 1;
-    private static final int MAX = 10;
     private final RandomNumbersGenerator generator = new RandomNumbersGenerator();
-    private final UserNumbers generateUserNumbers = new UserNumbers();
+    private final UserNumbersRetriever generateUserNumbers = new UserNumbersRetriever();
     private Set<Integer> userNumbers = new HashSet<Integer>();
     private Set<Integer> randomNumbers = new HashSet<Integer>();
 

@@ -1,15 +1,15 @@
-package lotto;
+package app.lotto;
 
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class UserNumbers {
+import static app.lotto.LottoMessageProvider.*;
+
+public class UserNumbersRetriever {
 
 
-    private static final String START_MESSAGE = "Give 6 different numbers from range 1-99, to play lotto";
-    private static final String NUMBER_CONTAINED = "You already gave this number";
-    private static final String IT_IS_NOT_NUMBER = "Type real number!";
+
     private final Scanner scan = new Scanner(System.in);
     private final Set<Integer> userNumbers = new HashSet<Integer>();
 

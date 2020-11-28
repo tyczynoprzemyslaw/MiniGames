@@ -1,4 +1,4 @@
-package lotto;
+package app.lotto;
 
 import java.util.Set;
 
